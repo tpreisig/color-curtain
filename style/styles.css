@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(
+    to top right,
+    rgba(7, 193, 7, 0.4),
+    rgba(2, 199, 2, 0.9)
+  );
+}
+canvas {
+  transform: scale(1.1);
+}
+
+.control-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 9vw;
+  height: 7vh;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  outline: none;
+  backdrop-filter: blur(20px);
+  color: #fff;
+}
+.control-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#again {
+  top: 45%;
+  left: 50%;
+}
+#capture {
+  top: 55%;
+  left: 50%;
+}
+
+#screenshot-btn {
+  font-size: 1.1rem;
+  z-index: 100;
+  position: fixed;
+  left: 50%;
+  bottom: 32%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: rgb(30, 199, 112);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.screenshot-container {
+  position: relative;
+  max-width: 80%;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 3px solid rgb(74, 146, 109);
+}
+
+#screenshot-img {
+  display: block;
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(30, 199, 112);
+  background: none;
+  border: none;
+}
+
+#close-btn:hover {
+  color: rgb(74, 146, 109);
+}
+
+#download-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: rgb(30, 199, 112);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}

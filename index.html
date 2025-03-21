@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Curtain</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
     <canvas width="1425" height="800">
     </canvas>
-    <button id="button">Again</button>
+    <button class="control-btn" id="again">Again</button>
+    <button class="control-btn" id="capture">Capture</button>
 
-    <script src="./script.js"></script>
+
+    <div id="preview" class="preview hidden">
+        <div class="screenshot-container">
+            <img id="screenshot-img" alt="screenshot">
+            <button id="close-btn" class="fa-solid fa-times"></button>
+            <button id="download-btn">Download Screenshot</button>
+        </div>
+    </div>
+
+    <script src="scripts/capture.js"></script>
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>
