@@ -1,10 +1,10 @@
 
 const canvas = document.querySelector('canvas');
-const button = document.getElementById ('button');
+const againBtn = document.getElementById ('again');
 const ctx = canvas.getContext('2d');
 ctx.globalAlpha = 0.25;
 
-button.addEventListener('click', () => {
+againBtn.addEventListener('click', () => {
     window.location.reload();
 });
 
